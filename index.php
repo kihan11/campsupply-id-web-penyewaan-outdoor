@@ -87,7 +87,7 @@ if (isset($_POST['simpan'])) {
             if ($stmt->execute()) {
                 $_SESSION['notif'] = [
                     'type' => 'success',
-                    'message' => 'Data penyewaan berhasil disimpan dan menunggu persetujuan admin.'
+                    'message' => 'Pesanan berhasil dibuat dan sedang menunggu persetujuan admin.'
                 ];
                 header("Location: index.php#data");
                 exit;
@@ -126,7 +126,7 @@ $data = $conn->query("SELECT * FROM penyewaan ORDER BY id DESC");
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sistem Informasi Sewa Alat Camping / Outdoor</title>
+  <title>CampSupply ID | Sewa Alat Camping & Outdoor</title>
   <link rel="stylesheet" href="sewa.css">
 
   <style>
@@ -189,9 +189,7 @@ $data = $conn->query("SELECT * FROM penyewaan ORDER BY id DESC");
 </head>
 <body>
 
-  <?php
-    $notif = $flashNotif ?: $notifLocal;
-  ?>
+  <?php $notif = $flashNotif ?: $notifLocal; ?>
   <?php if (!empty($notif)) : ?>
     <div class="custom-notif <?php echo $notif['type']; ?>" id="customNotif">
       <div class="notif-text">
@@ -202,8 +200,13 @@ $data = $conn->query("SELECT * FROM penyewaan ORDER BY id DESC");
   <?php endif; ?>
 
   <header>
-    <h1>Sistem Informasi Sewa Alat Camping / Outdoor</h1>
-    <p>Melayani penyewaan alat camping dengan mudah, cepat, dan terorganisir.</p>
+    <div class="overlay">
+      <h1>CampSupply ID</h1>
+      <p>
+        Solusi praktis untuk penyewaan alat camping dan outdoor yang lengkap, terpercaya,
+        dan siap menemani setiap perjalanan petualangan Anda.
+      </p>
+    </div>
   </header>
 
   <nav>
@@ -217,16 +220,19 @@ $data = $conn->query("SELECT * FROM penyewaan ORDER BY id DESC");
 
   <main>
     <section id="beranda">
-      <h2>Beranda</h2>
-      <p>Selamat datang di layanan penyewaan alat camping dan outdoor yang 
-        siap membantu perjalanan petualangan Anda menjadi lebih mudah, praktis, dan menyenangkan. 
-        Website ini menyediakan berbagai perlengkapan outdoor yang dapat dipesan dengan cepat, dilengkapi informasi stok yang jelas, proses pemesanan yang sederhana, 
-        serta pengelolaan layanan yang profesional. Dengan sistem yang modern dan terpercaya, kami berkomitmen memberikan kemudahan bagi setiap pelanggan untuk mendapatkan alat camping terbaik tanpa repot, 
-        sehingga Anda bisa lebih fokus menikmati pengalaman berpetualang.</p>
+      <h2>Selamat Datang di CampSupply ID</h2>
+      <p>
+        CampSupply ID hadir untuk membantu Anda mendapatkan perlengkapan camping dan outdoor
+        dengan lebih mudah, cepat, dan nyaman. Mulai dari tenda, carrier, sleeping bag,
+        hingga perlengkapan pendukung lainnya, semua dapat dilihat, dipilih, dan dipesan
+        secara praktis melalui sistem yang terorganisir. Kami berkomitmen memberikan layanan
+        penyewaan yang modern, aman, dan terpercaya agar setiap petualangan Anda terasa
+        lebih siap, lebih seru, dan lebih berkesan.
+      </p>
     </section>
 
     <section id="katalog">
-      <h2>Katalog Alat Camping</h2>
+      <h2>Katalog Perlengkapan Outdoor</h2>
       <table border="1" cellpadding="10" cellspacing="0">
         <thead>
           <tr>
@@ -397,7 +403,7 @@ $data = $conn->query("SELECT * FROM penyewaan ORDER BY id DESC");
   </main>
 
   <footer>
-    <p>&copy; 2026 Sistem Informasi Sewa Alat Camping / Outdoor</p>
+    <p>&copy; 2026 CampSupply ID - Adventure Starts Here.</p>
   </footer>
 
   <script src="script.js"></script>
