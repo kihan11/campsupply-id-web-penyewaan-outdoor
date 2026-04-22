@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <link rel="stylesheet" href="sewa.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistem Informasi Sewa Alat Camping / Outdoor</title>
+</head>
+<body>
+
+    <script src="script.js"></script>
+
+  <!-- Header -->
+  <header>
+    <h1>Sistem Informasi Sewa Alat Camping / Outdoor</h1>
+    <p>Melayani penyewaan alat camping dengan mudah, cepat, dan terorganisir.</p>
+  </header>
+
+  <!-- Navigasi -->
+  <nav>
+    <ul>
+      <li><a href="#beranda">Beranda</a></li>
+      <li><a href="#tentang">Tentang</a></li>
+      <li><a href="#katalog">Katalog Alat</a></li>
+      <li><a href="#sewa">Form Sewa</a></li>
+      <li><a href="#data">Data Penyewaan</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- Beranda -->
+    <section id="beranda">
+      <h2>Beranda</h2>
+      <p>
+        Selamat datang di layanan penyewaan alat camping dan outdoor yang 
+        siap membantu perjalanan petualangan Anda menjadi lebih mudah, praktis, dan menyenangkan. 
+        Website ini menyediakan berbagai perlengkapan outdoor yang dapat dipesan dengan cepat, dilengkapi informasi stok yang jelas, proses pemesanan yang sederhana, 
+        serta pengelolaan layanan yang profesional. Dengan sistem yang modern dan terpercaya, kami berkomitmen memberikan kemudahan bagi setiap pelanggan untuk mendapatkan alat camping terbaik tanpa repot, 
+        sehingga Anda bisa lebih fokus menikmati pengalaman berpetualang.
+      
+      </p>
+    </section>
+
+    <!-- Tentang -->
+    <section id="tentang">
+      <h2>Tentang Sistem</h2>
+      <p>
+        Sistem Informasi Sewa Alat Camping / Outdoor adalah aplikasi berbasis web
+        yang membantu admin dan pelanggan dalam proses penyewaan alat seperti tenda,
+        carrier, sleeping bag, kompor portable, dan perlengkapan outdoor lainnya.
+      </p>
+      <p>Fitur utama:</p>
+      <ul>
+        <li>Menampilkan daftar alat camping</li>
+        <li>Input data pelanggan</li>
+        <li>Input transaksi penyewaan</li>
+        <li>Melihat data penyewaan</li>
+        <li>Pengelolaan data alat dan stok</li>
+      </ul>
+    </section>
+
+    <!-- Katalog -->
+    <section id="katalog">
+      <h2>Katalog Alat Camping</h2>
+
+      <table border="1" cellpadding="10" cellspacing="0">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Nama Alat</th>
+            <th>Kategori</th>
+            <th>Harga Sewa / Hari</th>
+            <th>Stok</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Tenda 4 Orang</td>
+            <td>Tenda</td>
+            <td>Rp50.000</td>
+            <td>10</td>
+            <td>Tersedia</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Sleeping Bag</td>
+            <td>Perlengkapan Tidur</td>
+            <td>Rp20.000</td>
+            <td>15</td>
+            <td>Tersedia</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Carrier 60L</td>
+            <td>Tas Outdoor</td>
+            <td>Rp35.000</td>
+            <td>8</td>
+            <td>Tersedia</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Kompor Portable</td>
+            <td>Peralatan Masak</td>
+            <td>Rp25.000</td>
+            <td>6</td>
+            <td>Tersedia</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Form Sewa -->
+    <section id="sewa">
+      <h2>Form Penyewaan</h2>
+
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Data Pelanggan</legend>
+
+          <p>
+            <label for="nama">Nama Lengkap:</label><br>
+            <input type="text" id="nama" name="nama" required>
+          </p>
+
+          <p>
+            <label for="alamat">Alamat:</label><br>
+            <textarea id="alamat" name="alamat" rows="4" cols="30" required></textarea>
+          </p>
+
+          <p>
+            <label for="telepon">No. Telepon:</label><br>
+            <input type="text" id="telepon" name="telepon" required>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Data Penyewaan</legend>
+
+          <p>
+            <label for="alat">Pilih Alat:</label><br>
+            <select id="alat" name="alat" required>
+              <option value="">-- Pilih Alat --</option>
+              <option value="Tenda 4 Orang">Tenda 4 Orang</option>
+              <option value="Sleeping Bag">Sleeping Bag</option>
+              <option value="Carrier 60L">Carrier 60L</option>
+              <option value="Kompor Portable">Kompor Portable</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="jumlah">Jumlah:</label><br>
+            <input type="number" id="jumlah" name="jumlah" min="1" required>
+          </p>
+
+          <p>
+            <label for="tanggal_sewa">Tanggal Sewa:</label><br>
+            <input type="date" id="tanggal_sewa" name="tanggal_sewa" required>
+          </p>
+
+          <p>
+            <label for="tanggal_kembali">Tanggal Kembali:</label><br>
+            <input type="date" id="tanggal_kembali" name="tanggal_kembali" required>
+          </p>
+
+          <p>
+            <label for="metode">Metode Pembayaran:</label><br>
+            <select id="metode" name="metode" required>
+              <option value="">-- Pilih Metode --</option>
+              <option value="Transfer Bank">Transfer Bank</option>
+              <option value="Cash">Cash</option>
+              <option value="E-Wallet">E-Wallet</option>
+            </select>
+          </p>
+        </fieldset>
+
+        <button type="submit">Simpan Data Sewa</button>
+        <button type="reset">Reset</button>
+      </form>
+    </section>
+
+    <!-- Data Penyewaan -->
+    <section id="data">
+      <h2>Data Penyewaan</h2>
+
+      <table border="1" cellpadding="10" cellspacing="0">
+        <thead>
+          <tr>
+            <th>ID Sewa</th>
+            <th>Nama Pelanggan</th>
+            <th>Nama Alat</th>
+            <th>Jumlah</th>
+            <th>Tanggal Sewa</th>
+            <th>Tanggal Kembali</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>SW001</td>
+            <td>Andi</td>
+            <td>Tenda 4 Orang</td>
+            <td>2</td>
+            <td>2026-04-22</td>
+            <td>2026-04-24</td>
+            <td>Dipinjam</td>
+          </tr>
+          <tr>
+            <td>SW002</td>
+            <td>Siti</td>
+            <td>Sleeping Bag</td>
+            <td>3</td>
+            <td>2026-04-21</td>
+            <td>2026-04-23</td>
+            <td>Dikembalikan</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Kontak -->
+    <section id="kontak">
+      <h2>Kontak</h2>
+      <p>Email: info@sewaoutdoor.com</p>
+      <p>Telepon: 0812-3456-7890</p>
+      <p>Alamat: Jl. Camping Ceria No. 10</p>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Sistem Informasi Sewa Alat Camping / Outdoor</p>
+  </footer>
+
+</body>
+</html>
